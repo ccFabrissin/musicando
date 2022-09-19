@@ -10,8 +10,8 @@ const generos = require('./routes/generos.js');
 const app = express();
 
 //************ Listen port ************
-app.listen(3000, ()=>{
-    console.log('Servidor corriendo en http://localhost:3000/');
+app.listen(3001, ()=>{
+    console.log('Servidor corriendo en http://localhost:3001/');
 });
 
 // ************ View engine setup ************
