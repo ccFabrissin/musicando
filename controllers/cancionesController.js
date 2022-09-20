@@ -2,10 +2,11 @@ let db = require("../database/models");
 
 const cancionesController = {
     list: (req,res) => {
-        db.Canciones.findAll()
+        db.Canciones.findAll({include: ["generos", "artistas"]})
             .then((canciones)=>{
                 return res.json({
                      status: 200,
+                     total: canciones.length,
                      data:canciones
                     })
             })
